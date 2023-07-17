@@ -2,28 +2,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Lightbug.GrabIt
+namespace Lightbug.DragIt
 {
 
+[RequireComponent( typeof( Camera ) )]
+[RequireComponent( typeof( SphereCollider ) )]
 public class FreeCam : MonoBehaviour{
 
+	[Header("Collision Detection")]
+
+	[SerializeField] bool m_collisionDetection = true;
+	[SerializeField] LayerMask m_collisionLayerMask;
+
+	[Header("Movement")]
 	
+	[SerializeField] float speed = 4;
+	
+	[Header("Rotation")]
+
 	[SerializeField] float mouseLookSensitivity = 2;
 	[Range( 45f , 90f )] [SerializeField] float m_pitchMaxAngle = 80f;
 
-	[SerializeField] float speed = 4;
+	
 	
 
 	Vector3 currentVelocity;
 
 	float m_pitch;
 
+	Camera m_camera;
+	SphereCollider m_collider;
+	Collider[] m_results = new Collider[5];
+
 	void Start () 
 	{
 		Cursor.visible = false;
 		Cursor.lockState = CursorLockMode.Locked;
-		//anglePitch = 0;
-
+		
+		m_camera = GetComponent<Camera>();
+		m_collider = GetComponent<SphereCollider>();
 	}
 
 
@@ -63,12 +80,52 @@ public class FreeCam : MonoBehaviour{
 		Vector3 targetVelocity = ( new Vector3(rightMove , upMove , forwardMove) ).normalized * speed; 
 		currentVelocity = Vector3.Lerp( currentVelocity , targetVelocity , Time.deltaTime * 7f );
 
-		transform.Translate( currentVelocity * Time.deltaTime );
+		Move( currentVelocity * Time.deltaTime );
 
 
 		
 
 	}
+
+	void Depenetrate()
+	{		
+		Physics.OverlapSphereNonAlloc( 
+			transform.position ,
+			m_collider.radius ,
+			m_results ,
+			m_collisionLayerMask 
+		);
+
+		Vector3 direction = Vector3.zero;
+		float distance = 0;
+
+		
+
+		for (int i = 0; i < m_results.Length; i++)
+		{
+			if(m_results[i] == null || m_results[i] == m_collider)
+				continue;
+
+			Physics.ComputePenetration( m_collider , transform.position , transform.rotation
+			, m_results[i] , m_results[i].transform.position , m_results[i].transform.rotation , 
+			out direction , out distance );
+
+			if(distance != 0)
+				transform.Translate( direction * distance , Space.World);
+		}
+
+		
+	}
+
+	void Move(Vector3 deltaPosition)
+	{
+		transform.Translate( deltaPosition );
+
+		if(m_collisionDetection)
+			Depenetrate();
+		
+	}
+
 }
 
 }

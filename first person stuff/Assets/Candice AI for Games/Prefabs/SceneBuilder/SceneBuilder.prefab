@@ -1,0 +1,199 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &676238389247651559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8502299144828806730}
+  - component: {fileID: 8878054507969626268}
+  - component: {fileID: 770841207045462684}
+  - component: {fileID: 5443186210038392030}
+  m_Layer: 0
+  m_Name: Trigger Next By Nuke Shockwave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8502299144828806730
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676238389247651559}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4521223088421030127}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8878054507969626268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676238389247651559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1820d776978d9f4496a36cf2aaa8f3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToNextScene: 10
+  isIntro: 0
+  Loading: {fileID: 5785985028695969077, guid: 246e885f7acb5b7419bfe6c1412c517b, type: 3}
+  TimeObject: {fileID: 7115541063540010510, guid: 262f3cdd38b34fe48a28e462148008c3, type: 3}
+  TimeText: {fileID: 624206794074534790, guid: 2ad9b7acfc73d124db96a729b4c47a23, type: 3}
+--- !u!135 &770841207045462684
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676238389247651559}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &5443186210038392030
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676238389247651559}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!1 &2933516491925948315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4342654511436726199}
+  - component: {fileID: 1680287272073792241}
+  - component: {fileID: 5663535930573149359}
+  m_Layer: 0
+  m_Name: Trigger Next By Cataclysm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4342654511436726199
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2933516491925948315}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4521223088421030127}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1680287272073792241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2933516491925948315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1820d776978d9f4496a36cf2aaa8f3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToNextScene: 10
+  isIntro: 0
+  Loading: {fileID: 5785985028695969077, guid: 246e885f7acb5b7419bfe6c1412c517b, type: 3}
+  TimeObject: {fileID: 7115541063540010510, guid: 262f3cdd38b34fe48a28e462148008c3, type: 3}
+  TimeText: {fileID: 624206794074534790, guid: 2ad9b7acfc73d124db96a729b4c47a23, type: 3}
+--- !u!135 &5663535930573149359
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2933516491925948315}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 220
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &4521223088421030033
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4521223088421030127}
+  - component: {fileID: 2615155066539009572}
+  m_Layer: 0
+  m_Name: SceneBuilder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4521223088421030127
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4521223088421030033}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4342654511436726199}
+  - {fileID: 8502299144828806730}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2615155066539009572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4521223088421030033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8f3d9327f6def4d81912e86a90dfcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AI: {fileID: 8242550024521004433, guid: 5ccd146086c78e74283b5b88ccf3479a, type: 3}
+  EventSystem: {fileID: 6351141774608534164, guid: a230bce853c6a8a4fa3cc3518ee67ec1, type: 3}
+  Cameras: {fileID: 4417087016483444923, guid: dc707340dbb7f9145be293ebf35bd331, type: 3}
+  Lighting: {fileID: 7784479629204934347, guid: 902f4d8bb0b4e4f448254fb49db43813, type: 3}
+  Audio: {fileID: 8607359360791424284, guid: bcf7a0406dbb44d4da7dc8de64f18523, type: 3}
+  UI: {fileID: 7038723877254997326, guid: 4a6f042b6f1192f4fb559ad130b3138a, type: 3}
+  Agents: {fileID: 7896021318366336805, guid: b4f3d24e2a489e44cbd10b63ed2afb82, type: 3}
+  Environment: {fileID: 3061422678960338056, guid: 40aac50c32bfe024e8a2c8598dc698a6, type: 3}
+  SceneDecor: {fileID: 3141110911228897934, guid: 91e9c0ec54de7b641be1785ee09ac089, type: 3}
+  resetButton: {fileID: 6542057369965699499, guid: 884d446dac7cd6449bd669cfcc564158, type: 3}
+  LoadingUIObject: {fileID: 5785985028695969077, guid: 246e885f7acb5b7419bfe6c1412c517b, type: 3}

@@ -1,0 +1,1 @@
+These animations can be used on any Unity Humanoid Rig. See provided animations controller for details.

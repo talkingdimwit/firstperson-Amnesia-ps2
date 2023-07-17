@@ -1,0 +1,1 @@
+The assets in this folder are all free assets available on the Unity Asset Store. Simply search for them by name and you can favorite and track them as new releases become available. We may or may not maintain individual models.
