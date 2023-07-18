@@ -1,1 +1,0 @@
-These are prefabs that implement the CandiceDrop component.
