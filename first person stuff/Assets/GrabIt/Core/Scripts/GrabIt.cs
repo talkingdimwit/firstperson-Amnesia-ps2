@@ -32,7 +32,7 @@ public class GrabIt : MonoBehaviour {
 	float m_grabMinDistance = 1;
 
 	[SerializeField]
-	[Range(4 ,25)]
+	[Range(1 ,25)]
 	float m_grabMaxDistance = 10;
 
 	[SerializeField]
