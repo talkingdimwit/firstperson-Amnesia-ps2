@@ -56,7 +56,8 @@ public class InventoryScriptLITE : MonoBehaviour {
 
 	void Update(){
 		RaycastHit hit;
-		Vector3 fwd = transform.TransformDirection (Vector3.forward);
+		Vector3 cameraCenter = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.0f));
+		Vector3 fwd = Camera.main.transform.TransformDirection(Vector3.forward);
 
 		if (Input.GetKeyDown(inventoryKey)) {
 			inventory = !inventory;
@@ -69,7 +70,7 @@ public class InventoryScriptLITE : MonoBehaviour {
 			}
 		}
 
-		if (Physics.Raycast (transform.position, fwd, out hit, rayLength, layerMask)) {
+		if (Physics.Raycast(cameraCenter, fwd, out hit, rayLength, layerMask)) {
 			itemPrompt.SetActive (true);
 			if (hit.transform != lookingAt) {
 				if (lookingAt != null) {
