@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class flashLight : MonoBehaviour
+public class playerLight : MonoBehaviour
 {
     [SerializeField] GameObject FlashlightLight;
     private bool FlashlightActive = false;
