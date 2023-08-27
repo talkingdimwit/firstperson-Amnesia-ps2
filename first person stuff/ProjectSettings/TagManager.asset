@@ -7,6 +7,10 @@ TagManager:
   - InventoryItem
   - ItemPanel
   - InventoryGrid
+  - SF_Door
+  - EmptyFuse
+  - Fuse
+  - FullFuse
   layers:
   - Default
   - TransparentFX
