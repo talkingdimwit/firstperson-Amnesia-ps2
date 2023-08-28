@@ -7,6 +7,8 @@ public class enemy : MonoBehaviour
 {
     private NavMeshAgent Enemy;
     public Transform PlayerTarget;
+    public Transform targetLocation; // Assign the target location in the Inspector
+
 
     // Start is called before the first frame update
     void Start()
@@ -18,5 +20,13 @@ public class enemy : MonoBehaviour
     void Update()
     {
         Enemy.SetDestination(PlayerTarget.position);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            // Move the collided object to the target location
+            collision.gameObject.transform.position = targetLocation.position;
+        }
     }
 }
